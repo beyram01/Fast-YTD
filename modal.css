@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
+
+:root {
+  --red: #eb7272;
+  --dark-red: #c86060;
+  --dark-blue: #2a3b53;
+  --main-font: "Titillium Web", "sans serif";
+  --border-radius: 5px;
+  --height: 50%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+}
+.download__modal select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg width='9px' viewBox='0 0 9 7' xmlns='http://www.w3.org/2000/svg'><path d='M4.5 6.74869C4.30857 6.74772 4.11975 6.70415 3.94725 6.62115C3.77475 6.53814 3.62289 6.41777 3.50269 6.26878L0.345809 2.44452C0.16134 2.2143 0.0452565 1.93688 0.0107866 1.64388C-0.0236834 1.35089 0.0248466 1.0541 0.150846 0.787347C0.253036 0.555512 0.419799 0.35799 0.631217 0.218374C0.842636 0.0787585 1.08977 0.00294922 1.34311 0H7.65688C7.91023 0.00294922 8.15736 0.0787585 8.36878 0.218374C8.5802 0.35799 8.74696 0.555512 8.84915 0.787347C8.97515 1.0541 9.02368 1.35089 8.98921 1.64388C8.95474 1.93688 8.83866 2.2143 8.65419 2.44452L5.49731 6.26878C5.37711 6.41777 5.22525 6.53814 5.05275 6.62115C4.88025 6.70415 4.69143 6.74772 4.5 6.74869Z'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 50%;
+  width: 9px;
+}
+.download__modal {
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.download_modal_paramaters {
+  background-color: white;
+  width: 60%;
+  height: var(--height);
+  padding: 0 1.5rem;
+}
+.red {
+  color: var(--red);
+}
+.download_modal_title {
+  text-align: center;
+  font-size: 23px;
+  margin: 3rem 0 4rem 0;
+  font-weight: 700;
+}
+.download_modal_paramaters > div:not(div:last-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.download_modal_paramaters > div:not(div:last-child) > label {
+  width: 23%;
+  font-size: 14px;
+  font-weight: 400;
+}
+.download_modal_paramaters input,
+.download_modal_paramaters select {
+  flex: 1;
+  height: 35px;
+  background-color: white;
+  padding-left: 0.5rem;
+  font-size: 14px;
+  border: 1px solid black;
+}
+.modal__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+.modal__controls > button {
+  width: 170px;
+  text-align: center;
+  padding: 1.2rem 0;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.modal__controls > #convert {
+  border: none;
+  background-color: var(--red);
+  color: white;
+}
+.modal__controls > #convert:hover {
+  background-color: var(--dark-red);
+}
+.modal__controls > #cancel {
+  border: 1px solid black;
+  background-color: white;
+  margin-left: 1rem;
+}

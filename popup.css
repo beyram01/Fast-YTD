@@ -1,0 +1,77 @@
+:root {
+  --red: #eb7272;
+  --dark-red: #c86060;
+  --dark-blue: #2a3b53;
+  --main-font: "Titillium Web", "sans serif";
+  --border-radius: 5px;
+  --height: 35px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+}
+body {
+  background-color: var(--dark-blue);
+  color: white;
+  width: 250px;
+  padding: 0 1rem;
+}
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg width='9px' viewBox='0 0 9 7' xmlns='http://www.w3.org/2000/svg'><path d='M4.5 6.74869C4.30857 6.74772 4.11975 6.70415 3.94725 6.62115C3.77475 6.53814 3.62289 6.41777 3.50269 6.26878L0.345809 2.44452C0.16134 2.2143 0.0452565 1.93688 0.0107866 1.64388C-0.0236834 1.35089 0.0248466 1.0541 0.150846 0.787347C0.253036 0.555512 0.419799 0.35799 0.631217 0.218374C0.842636 0.0787585 1.08977 0.00294922 1.34311 0H7.65688C7.91023 0.00294922 8.15736 0.0787585 8.36878 0.218374C8.5802 0.35799 8.74696 0.555512 8.84915 0.787347C8.97515 1.0541 9.02368 1.35089 8.98921 1.64388C8.95474 1.93688 8.83866 2.2143 8.65419 2.44452L5.49731 6.26878C5.37711 6.41777 5.22525 6.53814 5.05275 6.62115C4.88025 6.70415 4.69143 6.74772 4.5 6.74869Z'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 50%;
+  width: 9px;
+}
+.red {
+  color: var(--red);
+}
+.popup__title {
+  text-align: center;
+  margin: 1rem 0 2rem 0;
+  font-size: 1.8rem;
+}
+.popup__settings__block {
+  margin-bottom: 0.8rem;
+}
+
+#key,
+#format,
+#save__settings {
+  border-radius: var(--border-radius);
+  border: none;
+  width: 100%;
+  height: var(--height);
+  font-size: 15px;
+}
+#key {
+  text-align: center;
+}
+#format {
+  background-color: white;
+  padding: 0 0.4rem;
+  font-size: 14px;
+}
+
+#save__settings {
+  color: white;
+  background-color: var(--red);
+  margin: 1rem 0 2rem 0;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: background 0.3s ease;
+}
+#save__settings:hover {
+  background-color: var(--dark-red);
+}

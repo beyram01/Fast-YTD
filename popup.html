@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <div class="popup__container">
+      <h1 class="popup__title">Fast <span class="red">YTD</span></h1>
+      <div class="popup__settings">
+        <div class="popup__settings__block">
+          <label for="key">Key</label>
+          <input type="text" id="key" value="!" />
+        </div>
+        <div class="popup__settings__block">
+          <label for="format">Default Download Format</label>
+          <select name="format" id="format">
+            <option value="mp3">mp3</option>
+            <option value="mp4">mp4</option>
+            <option value="webm">webm</option>
+            <option value="mkv">mkv</option>
+          </select>
+        </div>
+        <button id="save__settings">Save</button>
+      </div>
+    </div>
+  </body>
+</html>
