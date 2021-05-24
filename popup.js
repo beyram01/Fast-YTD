@@ -7,8 +7,27 @@ chrome.storage.sync.get("settings", ({ settings }) => {
   formatInput.value = settings.format;
 });
 
+saveButton.setAttribute("disabled", "true");
+
+keyInput.addEventListener("keypress", () => {
+  saveButton.removeAttribute("disabled");
+});
+
+formatInput.addEventListener("change", () => {
+  saveButton.removeAttribute("disabled");
+});
+
 saveButton.addEventListener("click", () => {
-  updateSettings();
+  if (keyInput.value.length > 1) {
+    keyInput.className = "error";
+  } else {
+    keyInput.className = "";
+    updateSettings();
+    saveButton.innerHTML = "Saved &#x1F44C;";
+    setTimeout(() => {
+      saveButton.innerText = "Save";
+    }, 2000);
+  }
 });
 
 const updateSettings = () => {

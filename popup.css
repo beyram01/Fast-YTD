@@ -1,6 +1,7 @@
 :root {
   --red: #eb7272;
   --dark-red: #c86060;
+  --disabled-red: #ff9c9c;
   --dark-blue: #2a3b53;
   --main-font: "Titillium Web", "sans serif";
   --border-radius: 5px;
@@ -63,6 +64,9 @@ select {
   font-size: 14px;
 }
 
+.popup__settings__block > .error {
+  border: 2px solid var(--red) !important;
+}
 #save__settings {
   color: white;
   background-color: var(--red);
@@ -74,4 +78,8 @@ select {
 }
 #save__settings:hover {
   background-color: var(--dark-red);
+}
+#save__settings:disabled {
+  background-color: var(--disabled-red);
+  cursor: not-allowed;
 }

@@ -11,7 +11,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: var(--main-font);
 }
 .download__modal select {
   -moz-appearance: none; /* Firefox */
@@ -22,6 +21,7 @@
   background-position-x: 98%;
   background-position-y: 50%;
   width: 9px;
+  cursor: pointer;
 }
 .download__modal {
   position: fixed;
@@ -32,7 +32,10 @@
   justify-content: center;
   align-items: center;
 }
-.download_modal_paramaters {
+.download_modal_paramaters,
+.loading__container,
+.downloader__container,
+.error__container {
   background-color: white;
   width: 60%;
   height: var(--height);
@@ -43,9 +46,10 @@
 }
 .download_modal_title {
   text-align: center;
-  font-size: 23px;
-  margin: 3rem 0 4rem 0;
+  font-size: 28px;
+  margin: 2rem 0 3rem 0;
   font-weight: 700;
+  font-family: var(--main-font);
 }
 .download_modal_paramaters > div:not(div:last-child) {
   display: flex;
@@ -55,8 +59,9 @@
 }
 .download_modal_paramaters > div:not(div:last-child) > label {
   width: 23%;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
+  font-family: var(--main-font);
 }
 .download_modal_paramaters input,
 .download_modal_paramaters select {
@@ -64,8 +69,9 @@
   height: 35px;
   background-color: white;
   padding-left: 0.5rem;
-  font-size: 14px;
+  font-size: 16px;
   border: 1px solid black;
+  font-family: var(--main-font);
 }
 .modal__controls {
   display: flex;
@@ -73,25 +79,359 @@
   align-items: center;
   margin-top: 4rem;
 }
-.modal__controls > button {
+.error__container > button,
+.modal__controls > button,
+.downloader__container > button {
   width: 170px;
   text-align: center;
   padding: 1.2rem 0;
   border-radius: var(--border-radius);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   cursor: pointer;
+  font-family: var(--main-font);
 }
-.modal__controls > #convert {
+#convert,
+#exit {
   border: none;
   background-color: var(--red);
   color: white;
 }
-.modal__controls > #convert:hover {
+#convert:hover,
+#exit:hover {
   background-color: var(--dark-red);
 }
 .modal__controls > #cancel {
   border: 1px solid black;
   background-color: white;
   margin-left: 1rem;
+}
+
+/*  Loading Style  */
+
+.loading__container,
+.error__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loading__container > p {
+  color: var(--red);
+  font-size: 30px;
+  font-weight: 600;
+  font-family: var(--main-font);
+}
+.loading__animation {
+  display: flex;
+  height: 50px;
+}
+.loading__animation > span {
+  display: block;
+  width: 6px;
+  height: 20px;
+  border: 2px solid var(--red);
+  border-radius: 10px;
+  margin: 2rem 0.5rem;
+}
+.loading__animation > span:nth-child(1) {
+  animation: loading1 3s infinite;
+}
+.loading__animation > span:nth-child(2) {
+  animation: loading2 3s infinite;
+}
+.loading__animation > span:nth-child(3) {
+  animation: loading3 3s infinite;
+}
+.loading__animation > span:nth-child(4) {
+  animation: loading4 3s infinite;
+}
+.loading__animation > span:nth-child(5) {
+  animation: loading5 3s infinite;
+}
+
+/* FInal Step  */
+.downloader__container {
+  height: 55%;
+}
+.video__info {
+  display: flex;
+}
+.video__info > img {
+  height: 150px;
+  width: auto;
+}
+.video__info > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.video__info > div > h2 {
+  font-family: var(--main-font);
+  font-weight: 600;
+  margin-left: 0.5rem;
+  font-size: 17px;
+}
+
+.error__container > #exit,
+.downloader__container > #exit {
+  display: block;
+  margin: 2rem auto;
+}
+.ytd__download__links > a {
+  display: inline-block;
+  font-family: var(--main-font);
+  color: var(--red);
+  text-decoration: none;
+  border: 1px solid var(--red);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: var(--border-radius);
+  font-size: 12px;
+  transition: 0.3s ease;
+}
+.ytd__download__links > a:hover {
+  background-color: var(--red);
+  color: white;
+}
+
+.error__container > svg {
+  width: 40px;
+  fill: var(--red);
+}
+.error__container > p {
+  font-family: var(--main-font);
+  font-size: 28px;
+  color: var(--red);
+}
+
+@keyframes loading1 {
+  0% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  10% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  20% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  30% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  40% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  50% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  60% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  70% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  80% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  90% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes loading2 {
+  0% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  10% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  20% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  30% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  40% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  50% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  60% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  70% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  80% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  90% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes loading3 {
+  0% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  10% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  20% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  30% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  40% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  50% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  60% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  70% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  80% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  90% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes loading4 {
+  0% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  10% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  20% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  30% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  40% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  50% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  60% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  70% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  80% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  90% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
+}
+@keyframes loading5 {
+  0% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  10% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  20% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  30% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  40% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  50% {
+    height: 10px;
+    transform: translateY(10px);
+  }
+  60% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  70% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  80% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  90% {
+    height: 20px;
+    transform: translateY(0);
+  }
+  100% {
+    height: 20px;
+    transform: translateY(0);
+  }
 }
