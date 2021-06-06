@@ -23,6 +23,7 @@ So the extension is not available on the chrome store yet, But follow the steps 
 
 <div align="center"><img src="https://i.ibb.co/RHKfNYH/chrome-extensions-settings.png" alt=""/></div>
 
+
 Choose the extension folder that you cloned and you should be good to go.
 Your extension is Installed successfully.
 
