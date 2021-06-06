@@ -1,3 +1,3 @@
-# Fast-YTD
+<h1 align="center"></h1>
 
-![Fast-YTD](./icons/logo_128.png)
+<div align="center">![Fast-YTD](./icons/logo_128.png)</div>
