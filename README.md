@@ -22,7 +22,7 @@ So the extension is not available on the chrome store yet, But follow the steps 
 - Click **Load unpacked** button
 
 <div align="center"><img src="https://i.ibb.co/RHKfNYH/chrome-extensions-settings.png" alt=""/></div>
-
+<br />
 
 Choose the extension folder that you cloned and you should be good to go.
 Your extension is Installed successfully.
@@ -33,10 +33,12 @@ Your extension is Installed successfully.
 It's pretty easy, after The installation you this popup to help you set some configurations.
 
 <div align="center"><img src="https://i.ibb.co/Bsh6WCP/Fast-YTD.png" alt=""/></div>
+<br />
 
 So when you are in a youtube video page press '!' (Default Key that you can change) and a menu should appear.
 
-<div align="center"><img src="https://ibb.co/jwGLLPM" alt=""/></div>
+<div align="center"><img src="https://i.ibb.co/bvLrrMB/Screenshot-from-2021-06-06-14-02-05.png" alt=""/></div>
+<br />
 
 And that's it convert your video to the format that you want (mp3, mp4, webm, mkv) then download it.
 
