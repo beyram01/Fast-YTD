@@ -32,7 +32,7 @@ Your extension is Installed successfully.
 
 It's pretty easy, after The installation you this popup to help you set some configurations.
 
-<div align="center"><img src="https://ibb.co/SvkmY3x" alt=""/></div>
+<div align="center"><img src="https://i.ibb.co/Bsh6WCP/Fast-YTD.png" alt=""/></div>
 
 So when you are in a youtube video page press '!' (Default Key that you can change) and a menu should appear.
 
