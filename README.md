@@ -9,7 +9,7 @@ A chrome extention that helps you to download youtube videos easily. Just instal
 
 So the extension is not available on the chrome store yet, But follow the steps down below to install it manually:
 
-#### you can download the extension folder
+#### you can [download the extension folder](https://codeload.github.com/beyram01/Fast-YTD/zip/refs/heads/main)
 
 ## OR
 
